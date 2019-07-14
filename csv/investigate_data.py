@@ -40,7 +40,7 @@ def remove_udacity_accounts(data, udacity_test_accounts):
     return non_udacity_data
 
 
-enrollments = read_csv('enrollments.csv')  # read the records from csv file
+enrollments = read_csv('./csv_files/enrollments.csv')  # read the records from csv file
 enrollment_num_rows = len(enrollments)  # calculate the number of rows
 # calculate the number of unique students
 #print(f'number of rows are {enrollment_num_rows}')
@@ -50,7 +50,7 @@ enrollment_num_unique_students = len(number_unique_students(enrollments))
 ##############################################################################
 # print("###############daily_engagement#################")
 # read the records from csv file
-daily_engagement = read_csv('daily_engagement.csv')
+daily_engagement = read_csv('./csv_files/daily_engagement.csv')
 """
 replacing acct key to accoumt_key
 """
@@ -64,7 +64,7 @@ engagement_num_unique_students = len(number_unique_students(
 # print(f'engagement_num_unique_students={engagement_num_unique_students}')
 ##############################################################################
 # print("###############project_submissions#################")
-project_submissions = read_csv('project_submissions.csv')  # read  records
+project_submissions = read_csv('./csv_files/project_submissions.csv')  # read  records
 submission_num_rows = len(project_submissions)  # calculate the number of rows
 # print(f"submission_num_rows={submission_num_rows}")
 submission_num_unique_students = len(number_unique_students(

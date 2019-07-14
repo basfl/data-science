@@ -1,8 +1,5 @@
 import unicodecsv
-
-
 from datetime import datetime as dt
-
 
 class CSVreader():
   #  @staticmethod
@@ -26,7 +23,7 @@ class CSVreader():
             return int(i)
 
     def clean_data(self, csv_file_path, records):
-        if csv_file_path == "enrollments.csv":
+        if csv_file_path == "./csv_files/enrollments.csv":
             for self.enrollment in records:
                 self.enrollment['cancel_date'] = self.parse_date(
                     self.enrollment['cancel_date'])
@@ -37,7 +34,7 @@ class CSVreader():
                 self.enrollment['join_date'] = self.parse_date(
                     self.enrollment['join_date'])
             return records
-        elif csv_file_path == "daily_engagement.csv":
+        elif csv_file_path == "./csv_files/daily_engagement.csv":
             for self.engagement_record in records:
                 self.engagement_record['lessons_completed'] = int(
                     float(self.engagement_record['lessons_completed']))
@@ -50,7 +47,7 @@ class CSVreader():
                 self.engagement_record['utc_date'] = self.parse_date(
                     self.engagement_record['utc_date'])
             return records
-        elif csv_file_path == "project_submissions.csv":
+        elif csv_file_path == "./csv_files/project_submissions.csv":
             for self.submission in records:
                 self.submission['completion_date'] = self.parse_date(
                     self.submission['completion_date'])
