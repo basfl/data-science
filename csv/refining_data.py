@@ -1,0 +1,3 @@
+from investigate_data import non_udacity_enrollments
+
+#print(non_udacity_enrollments)
