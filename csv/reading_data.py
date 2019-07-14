@@ -1,12 +1,14 @@
-import unicodecsv
+#import unicodecsv
 from datetime import datetime as dt
+import csv
+
 
 class CSVreader():
   #  @staticmethod
     def read_csv_dict(self, csv_file_path):
 
-        with open(csv_file_path, 'rb') as self.f:
-            self.reader = unicodecsv.DictReader(self.f)
+        with open(csv_file_path, newline='') as self.f:
+            self.reader = csv.DictReader(self.f)
             self.records = list(self.reader)
         return self.clean_data(csv_file_path, self.records)
 
