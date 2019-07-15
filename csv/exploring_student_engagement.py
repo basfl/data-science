@@ -45,4 +45,4 @@ for student, total_minutes in total_minutes_by_account.items():
     if total_minutes > max_minutes:
         max_minutes = total_minutes
         student_with_max_minutes = student
-print(f'student_with_max_minutes={student_with_max_minutes}')
+print(f'max_minutes={max_minutes}')
