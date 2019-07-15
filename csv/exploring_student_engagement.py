@@ -46,3 +46,10 @@ for student, total_minutes in total_minutes_by_account.items():
         max_minutes = total_minutes
         student_with_max_minutes = student
 print(f'max_minutes={max_minutes}')
+#print(paid_engagement_in_first_week[1])
+for engagement in paid_engagement_in_first_week:
+        if engagement['account_key']== student_with_max_minutes:
+                print(engagement)
+                
+                
+

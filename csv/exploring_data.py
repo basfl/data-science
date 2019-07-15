@@ -18,7 +18,7 @@ for enrollment in non_udacity_enrollments:
             paid_students[account_key] = enrollment_date
 
 # print(paid_students)
-#print(len(paid_students))
+# print(len(paid_students))
 """
 Create a list of rows from the engagement table including only rows where
 the student is one of the paid students you just found, and the date is within
@@ -28,7 +28,7 @@ one week of the student's join date.
 
 def within_one_week(join_date, engagement_date):
     time_delta = engagement_date - join_date
-    return time_delta.days < 7
+    return time_delta.days < 7 and time_delta.days >= 0
 
 
 def remove_free_trial_cancels(data):
@@ -53,7 +53,7 @@ for engagement in paid_engagement:
     account_key = engagement['account_key']
     join_date = paid_students[account_key]
     engagement_record_date = engagement['utc_date']
-    if within_one_week(join_date,engagement_record_date):
+    if within_one_week(join_date, engagement_record_date):
         paid_engagement_in_first_week.append(engagement)
 
-#print(len(paid_engagement_in_first_week))
+# print(len(paid_engagement_in_first_week))
