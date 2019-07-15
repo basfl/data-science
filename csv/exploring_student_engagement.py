@@ -35,3 +35,14 @@ print(f'Mean: {np.mean(total_minutes)}')
 print(f'Standard deviation: {np.std(total_minutes)}')
 print(f'Minimum: {np.min(total_minutes)}')
 print(f'Maximum: {np.max(total_minutes)}')
+"""
+looping through the dictionary extract key and value
+perform simple compare to obtain the student with max minutes
+"""
+student_with_max_minutes = 0
+max_minutes = 0
+for student, total_minutes in total_minutes_by_account.items():
+    if total_minutes > max_minutes:
+        max_minutes = total_minutes
+        student_with_max_minutes = student
+print(f'student_with_max_minutes={student_with_max_minutes}')

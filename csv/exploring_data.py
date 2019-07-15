@@ -56,4 +56,4 @@ for engagement in paid_engagement:
     if within_one_week(join_date,engagement_record_date):
         paid_engagement_in_first_week.append(engagement)
 
-print(len(paid_engagement_in_first_week))
+#print(len(paid_engagement_in_first_week))
