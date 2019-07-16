@@ -82,3 +82,8 @@ lesson_completed_by_account = sum_grouped_data(
 lesson_completed = list(lesson_completed_by_account.values())
 
 describe_data(lesson_completed)
+
+print("######################days visted by account")
+days_visted_by_account = sum_grouped_data(engagement_by_account, 'has_visited')
+days_visted_by_account_list = list(days_visted_by_account.values())
+describe_data(days_visted_by_account_list)

@@ -44,8 +44,16 @@ paid_engagement = remove_free_trial_cancels(non_udacity_engagement)
 paid_submissions = remove_free_trial_cancels(non_udacity_submissions)
 
 # print(len(paid_enrollment))
-# print(len(paid_engagement))
+#print(len(paid_engagement))
 # print(len(paid_submissions))
+
+for engagement in paid_engagement:
+        
+        if engagement['num_courses_visited']>0:
+                engagement['has_visited']=1
+        else:
+                engagement['has_visited']=0
+
 
 paid_engagement_in_first_week = []
 
