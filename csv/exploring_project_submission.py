@@ -1,5 +1,8 @@
 from exploring_data import paid_submissions
 from exploring_data import paid_engagement_in_first_week
+from exploring_student_engagement import group_data
+from exploring_student_engagement import sum_grouped_data
+from exploring_student_engagement import describe_data
 
 """
 Create two lists of engagement data for paid students in the first week.
@@ -21,5 +24,16 @@ for engagement_record in paid_engagement_in_first_week:
     else:
         non_passing_engagement.append(engagement_record)
 
-print(len(passing_engagement))
-print(len(non_passing_engagement))
+# print(len(passing_engagement))
+# print(len(non_passing_engagement))
+print("##############################non_passing_students")
+passing_engagement_by_account = group_data(passing_engagement, 'account_key')
+non_passing_engagement_by_account = group_data(
+    non_passing_engagement, 'account_key')
+non_passing_minutes = sum_grouped_data(
+    non_passing_engagement_by_account, "total_minutes_visited")
+describe_data(list(non_passing_minutes.values()))
+print("##############################passing_students")
+passing_minutes = sum_grouped_data(
+    passing_engagement_by_account, "total_minutes_visited")
+describe_data(list(passing_minutes.values()))
