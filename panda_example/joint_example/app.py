@@ -17,7 +17,7 @@ def date_range_run():
         # print(df_ibm)
         #df1 = df1.join(df_ibm, how='inner')
         df_temp = df_temp.rename(columns={"Adj Close": symbol})
-        df1 = df1.join(df_temp, how="inner")
+        df1 = df1.join(df_temp, how="inner") 
     # remove NAN from column
     # df1.dropna()
     print(df1.loc["10/22/2018": "10/25/2018", ["IBM", "GLD"]])
