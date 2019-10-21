@@ -14,6 +14,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 # Fitting Simple Linear Regression to the Training set
 regressor = LinearRegression()
+# This will calculate the b0 and b1 coeffients
 regressor.fit(X_train, y_train)
 
 """
