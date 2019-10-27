@@ -6,4 +6,4 @@
 # Backward elimination algorithm :
 
  * 
- ![alt text](./backward_elimination.jpeg "Logo Title Text 1")
+ ![alt text](./backward_elimination.jpg "Logo Title Text 1")
