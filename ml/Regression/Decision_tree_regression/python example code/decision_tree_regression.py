@@ -29,7 +29,7 @@ regressor.fit(X, y)
 
 # Predicting a new result
 y_pred = regressor.predict([[6.5]])
-print(f"predicted value is {y_pred}");
+print(f"predicted value is {y_pred}")
 
 # Visualising the Decision Tree Regression results (higher resolution)
 X_grid = np.arange(min(X), max(X), 0.01)
