@@ -33,7 +33,7 @@ y_train = sc_y.fit_transform(y_train.reshape(-1,1))"""
 
 """ 
 we make linear regression & polynomial regression
-in order to comare them
+in order to compare them
 """
 # linear regression
 lin_reg = LinearRegression()
