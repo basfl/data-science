@@ -1,6 +1,8 @@
 # Random Forest Regression
 
 # Importing the libraries
+import statsmodels.formula.api as sm
+from sklearn.metrics import confusion_matrix
 from sklearn.ensemble import RandomForestRegressor
 import numpy as np
 import matplotlib.pyplot as plt
@@ -44,6 +46,8 @@ plt.ylabel('Salary')
 plt.show()
 
 # the greater the adjusted adjusted r square the better
-import statsmodels.formula.api as sm 
-regressor_OLS=sm.OLS(endog=y,exog=X).fit()
+regressor_OLS = sm.OLS(endog=y, exog=X).fit()
 print(regressor_OLS.summary())
+
+# tp = confusion_matrix(X, y).ravel()
+# print(tp)
